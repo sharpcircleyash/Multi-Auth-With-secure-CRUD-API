@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "16e0d72b-efd8-4c9e-ac6f-7f32c74507d7",
+		"name": "Transactional And Auth Api's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29592535"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "testuser",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user123@mail.comn",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user123@mail.comn",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDQ5YmI5MWI0ZDkyY2E3MzFlMjlhZjE2M2M3NTE3MjYwOGNhYjk1MGFmYjQwZDJhODc0MDgyZTA5YzQxM2RmOWU3ZDhhMGZiNzgxNzkzYjgiLCJpYXQiOjE2OTQwOTY3NTkuMDE1MzY2LCJuYmYiOjE2OTQwOTY3NTkuMDE1MzczLCJleHAiOjE3MjU3MTkxNTkuMDA1NzQ5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.Yb2KtSB1H9j8KBqHZXVnn2RnV2pQT9PPEt85k5kj4cUie5vuQiLK7qhdEgjar9gY4uFxU0VJx6aQx92O2A_x80YtIs4Qzm-yj18SBn4cQVvxhA4HD5D9JSlokO9nJHLqMrPaWci_6CiRm0_59hVcdFaCEsBtICcC2KUzBWtyslgejG7ayiUx11pPjjGSrt2FHkl0U-paQ0jz6ixxRi58Xo57U24A9Q8X1YAz55UJK1JH3Cg5FwjNCmFsPKhIllU7Js0AeyuWa6NLc99ZZWENyQ-_i5m8HgSVFVrLvFZSCNX4yAmO3yuBWFP1J5fgQ_2AFDU0Ayx2J1-mzK_Ad85e6AKv8hxInxehn1ehyMmbf57csl0RYN_yugWzVWVRg6GiSBmb1mYsdYWw31w7G43yKHch6KvXDlYc5voX0-wwp0Uratzxfoa4hWzJNjwipRpV1HBFuMeL0Uv727uv9j_TSFaL4N10xps0ZmybZH20AYteO3fKyhUIjUFptmFCMl_93K_oVZnCldKuuQaf1JPicWmqKBB6_4-xfu4IWLq6vwhUGeBn5mCC7oshZJqYdk-YAhFXk5nOEfcCyzuDygrYfXFbxhKAoGF7ctpMA9Nbn_HAnGHLPHCXs4GUVtPp_ogUb1DyCk3gnVzFCHYUn8SP_HDt5SwEerpMJ_4hasnIsIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDQ5YmI5MWI0ZDkyY2E3MzFlMjlhZjE2M2M3NTE3MjYwOGNhYjk1MGFmYjQwZDJhODc0MDgyZTA5YzQxM2RmOWU3ZDhhMGZiNzgxNzkzYjgiLCJpYXQiOjE2OTQwOTY3NTkuMDE1MzY2LCJuYmYiOjE2OTQwOTY3NTkuMDE1MzczLCJleHAiOjE3MjU3MTkxNTkuMDA1NzQ5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.Yb2KtSB1H9j8KBqHZXVnn2RnV2pQT9PPEt85k5kj4cUie5vuQiLK7qhdEgjar9gY4uFxU0VJx6aQx92O2A_x80YtIs4Qzm-yj18SBn4cQVvxhA4HD5D9JSlokO9nJHLqMrPaWci_6CiRm0_59hVcdFaCEsBtICcC2KUzBWtyslgejG7ayiUx11pPjjGSrt2FHkl0U-paQ0jz6ixxRi58Xo57U24A9Q8X1YAz55UJK1JH3Cg5FwjNCmFsPKhIllU7Js0AeyuWa6NLc99ZZWENyQ-_i5m8HgSVFVrLvFZSCNX4yAmO3yuBWFP1J5fgQ_2AFDU0Ayx2J1-mzK_Ad85e6AKv8hxInxehn1ehyMmbf57csl0RYN_yugWzVWVRg6GiSBmb1mYsdYWw31w7G43yKHch6KvXDlYc5voX0-wwp0Uratzxfoa4hWzJNjwipRpV1HBFuMeL0Uv727uv9j_TSFaL4N10xps0ZmybZH20AYteO3fKyhUIjUFptmFCMl_93K_oVZnCldKuuQaf1JPicWmqKBB6_4-xfu4IWLq6vwhUGeBn5mCC7oshZJqYdk-YAhFXk5nOEfcCyzuDygrYfXFbxhKAoGF7ctpMA9Nbn_HAnGHLPHCXs4GUVtPp_ogUb1DyCk3gnVzFCHYUn8SP_HDt5SwEerpMJ_4hasnIsIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "t_name",
+							"value": "Biding",
+							"description": "Transaction Name",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "35000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDQ5YmI5MWI0ZDkyY2E3MzFlMjlhZjE2M2M3NTE3MjYwOGNhYjk1MGFmYjQwZDJhODc0MDgyZTA5YzQxM2RmOWU3ZDhhMGZiNzgxNzkzYjgiLCJpYXQiOjE2OTQwOTY3NTkuMDE1MzY2LCJuYmYiOjE2OTQwOTY3NTkuMDE1MzczLCJleHAiOjE3MjU3MTkxNTkuMDA1NzQ5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.Yb2KtSB1H9j8KBqHZXVnn2RnV2pQT9PPEt85k5kj4cUie5vuQiLK7qhdEgjar9gY4uFxU0VJx6aQx92O2A_x80YtIs4Qzm-yj18SBn4cQVvxhA4HD5D9JSlokO9nJHLqMrPaWci_6CiRm0_59hVcdFaCEsBtICcC2KUzBWtyslgejG7ayiUx11pPjjGSrt2FHkl0U-paQ0jz6ixxRi58Xo57U24A9Q8X1YAz55UJK1JH3Cg5FwjNCmFsPKhIllU7Js0AeyuWa6NLc99ZZWENyQ-_i5m8HgSVFVrLvFZSCNX4yAmO3yuBWFP1J5fgQ_2AFDU0Ayx2J1-mzK_Ad85e6AKv8hxInxehn1ehyMmbf57csl0RYN_yugWzVWVRg6GiSBmb1mYsdYWw31w7G43yKHch6KvXDlYc5voX0-wwp0Uratzxfoa4hWzJNjwipRpV1HBFuMeL0Uv727uv9j_TSFaL4N10xps0ZmybZH20AYteO3fKyhUIjUFptmFCMl_93K_oVZnCldKuuQaf1JPicWmqKBB6_4-xfu4IWLq6vwhUGeBn5mCC7oshZJqYdk-YAhFXk5nOEfcCyzuDygrYfXFbxhKAoGF7ctpMA9Nbn_HAnGHLPHCXs4GUVtPp_ogUb1DyCk3gnVzFCHYUn8SP_HDt5SwEerpMJ_4hasnIsIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDQ5YmI5MWI0ZDkyY2E3MzFlMjlhZjE2M2M3NTE3MjYwOGNhYjk1MGFmYjQwZDJhODc0MDgyZTA5YzQxM2RmOWU3ZDhhMGZiNzgxNzkzYjgiLCJpYXQiOjE2OTQwOTY3NTkuMDE1MzY2LCJuYmYiOjE2OTQwOTY3NTkuMDE1MzczLCJleHAiOjE3MjU3MTkxNTkuMDA1NzQ5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.Yb2KtSB1H9j8KBqHZXVnn2RnV2pQT9PPEt85k5kj4cUie5vuQiLK7qhdEgjar9gY4uFxU0VJx6aQx92O2A_x80YtIs4Qzm-yj18SBn4cQVvxhA4HD5D9JSlokO9nJHLqMrPaWci_6CiRm0_59hVcdFaCEsBtICcC2KUzBWtyslgejG7ayiUx11pPjjGSrt2FHkl0U-paQ0jz6ixxRi58Xo57U24A9Q8X1YAz55UJK1JH3Cg5FwjNCmFsPKhIllU7Js0AeyuWa6NLc99ZZWENyQ-_i5m8HgSVFVrLvFZSCNX4yAmO3yuBWFP1J5fgQ_2AFDU0Ayx2J1-mzK_Ad85e6AKv8hxInxehn1ehyMmbf57csl0RYN_yugWzVWVRg6GiSBmb1mYsdYWw31w7G43yKHch6KvXDlYc5voX0-wwp0Uratzxfoa4hWzJNjwipRpV1HBFuMeL0Uv727uv9j_TSFaL4N10xps0ZmybZH20AYteO3fKyhUIjUFptmFCMl_93K_oVZnCldKuuQaf1JPicWmqKBB6_4-xfu4IWLq6vwhUGeBn5mCC7oshZJqYdk-YAhFXk5nOEfcCyzuDygrYfXFbxhKAoGF7ctpMA9Nbn_HAnGHLPHCXs4GUVtPp_ogUb1DyCk3gnVzFCHYUn8SP_HDt5SwEerpMJ_4hasnIsIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "t_name",
+							"value": "Biding",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "3200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDQ5YmI5MWI0ZDkyY2E3MzFlMjlhZjE2M2M3NTE3MjYwOGNhYjk1MGFmYjQwZDJhODc0MDgyZTA5YzQxM2RmOWU3ZDhhMGZiNzgxNzkzYjgiLCJpYXQiOjE2OTQwOTY3NTkuMDE1MzY2LCJuYmYiOjE2OTQwOTY3NTkuMDE1MzczLCJleHAiOjE3MjU3MTkxNTkuMDA1NzQ5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.Yb2KtSB1H9j8KBqHZXVnn2RnV2pQT9PPEt85k5kj4cUie5vuQiLK7qhdEgjar9gY4uFxU0VJx6aQx92O2A_x80YtIs4Qzm-yj18SBn4cQVvxhA4HD5D9JSlokO9nJHLqMrPaWci_6CiRm0_59hVcdFaCEsBtICcC2KUzBWtyslgejG7ayiUx11pPjjGSrt2FHkl0U-paQ0jz6ixxRi58Xo57U24A9Q8X1YAz55UJK1JH3Cg5FwjNCmFsPKhIllU7Js0AeyuWa6NLc99ZZWENyQ-_i5m8HgSVFVrLvFZSCNX4yAmO3yuBWFP1J5fgQ_2AFDU0Ayx2J1-mzK_Ad85e6AKv8hxInxehn1ehyMmbf57csl0RYN_yugWzVWVRg6GiSBmb1mYsdYWw31w7G43yKHch6KvXDlYc5voX0-wwp0Uratzxfoa4hWzJNjwipRpV1HBFuMeL0Uv727uv9j_TSFaL4N10xps0ZmybZH20AYteO3fKyhUIjUFptmFCMl_93K_oVZnCldKuuQaf1JPicWmqKBB6_4-xfu4IWLq6vwhUGeBn5mCC7oshZJqYdk-YAhFXk5nOEfcCyzuDygrYfXFbxhKAoGF7ctpMA9Nbn_HAnGHLPHCXs4GUVtPp_ogUb1DyCk3gnVzFCHYUn8SP_HDt5SwEerpMJ_4hasnIsIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/transactions/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
