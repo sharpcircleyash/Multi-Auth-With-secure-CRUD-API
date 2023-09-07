@@ -10,7 +10,7 @@ Laravel Multi Auth is a Complete Build of Laravel with Validation, User Roles an
 - Secure CRUD Api's.
 - Security and Validation.
 - Multi Dashboard.
-- Daly Logging and Error Handling.
+- Daily Logging and Error Handling.
 
 ### Installation Instructions
 
@@ -18,7 +18,6 @@ Laravel Multi Auth is a Complete Build of Laravel with Validation, User Roles an
 - ** Create a MySQL database for the project
 - ** mysql -u root -p
 - ** create database multiauth_laravel;
-\q
 - ** Configure your .env file
 - ** Install composer, php-mysql, php-ext and php-dom
 - ** Run composer update from the projects root folder
