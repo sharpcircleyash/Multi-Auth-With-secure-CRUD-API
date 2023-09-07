@@ -14,7 +14,6 @@ Laravel Multi Auth is a Complete Build of Laravel with Validation, User Roles an
 
 ### Installation Instructions
 
-- **[Vehikl](https://vehikl.com/)**
 - ** Run git clone https://github.com/sharpcircleyash/Multi-Auth-With-secure-CRUD-API.git Multi-Auth-With-secure-CRUD-API
 - ** Create a MySQL database for the project
 - ** mysql -u root -p
